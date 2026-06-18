@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KBO 선수 성적 조회</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>KBO Stats</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
-<h1>⚾ KBO 선수 성적 조회</h1>
+<header>
+  <h1>⚾ KBO STATS</h1>
+  <p>네이버 스포츠 기반 자동 업데이트</p>
+</header>
 
-<div class="search-box">
-
-<input
-id="searchInput"
-placeholder="선수 이름 입력">
-
-<button onclick="searchPlayer()">
-검색
-</button>
-
-</div>
+<section class="search">
+  <input id="searchInput" placeholder="선수 이름 입력"/>
+  <button onclick="searchPlayer()">검색</button>
+</section>
 
 <div id="result"></div>
+
+<section>
+  <h2>🏆 홈런 TOP 10</h2>
+  <div id="hrTop10"></div>
+</section>
+
+<section>
+  <h2>🎯 타율 TOP 10</h2>
+  <div id="avgTop10"></div>
+</section>
 
 <script src="app.js"></script>
 
