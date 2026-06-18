@@ -1,220 +1,41 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body{
-    font-family:'Pretendard',sans-serif;
-    background:#f4f7f3;
-    min-height:100vh;
+  font-family:sans-serif;
+  background:#f3f6f4;
+  margin:0;
 }
-
-/* 헤더 */
 
 header{
-    background:linear-gradient(
-        135deg,
-        #0b5e2b,
-        #0a3d1c
-    );
-
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-
-    box-shadow:
-        0 4px 10px rgba(0,0,0,.2);
+  background:linear-gradient(135deg,#0a5a2d,#063a1d);
+  color:white;
+  text-align:center;
+  padding:30px;
 }
 
-header h1{
-    font-size:3rem;
+.search{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:20px;
 }
 
-header p{
-    margin-top:10px;
-    opacity:.8;
+input{
+  padding:10px;
+  width:250px;
 }
 
-/* 검색 */
-
-.search-box{
-    display:flex;
-    max-width:800px;
-    margin:40px auto;
-    gap:10px;
+button{
+  background:#d62828;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  cursor:pointer;
 }
 
-.search-box input{
-    flex:1;
-    padding:15px;
-    border-radius:10px;
-    border:none;
-    font-size:16px;
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.15);
-}
-
-.search-box button{
-
-    background:#d62828;
-    color:white;
-
-    border:none;
-    padding:15px 25px;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.search-box button:hover{
-    background:#b71c1c;
-    transform:translateY(-2px);
-}
-
-/* 결과 영역 */
-
-#result{
-    max-width:900px;
-    margin:auto;
-}
-
-/* 선수 카드 */
-
-.player-card{
-
-    background:white;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.15);
-
-    margin-bottom:30px;
-
-    transition:.3s;
-}
-
-.player-card:hover{
-    transform:translateY(-5px);
-}
-
-.player-header{
-
-    background:
-    linear-gradient(
-        135deg,
-        #0b5e2b,
-        #1f7a3d
-    );
-
-    color:white;
-
-    padding:25px;
-}
-
-.player-header h2{
-    font-size:2rem;
-}
-
-.player-header p{
-    opacity:.8;
-}
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(180px,1fr));
-
-    gap:20px;
-
-    padding:30px;
-}
-
-.stat-box{
-
-    background:#f5f5f5;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    padding:20px;
-}
-
-.stat-title{
-    color:#666;
-    margin-bottom:10px;
-}
-
-.stat-value{
-
-    font-size:2rem;
-
-    font-weight:bold;
-
-    color:#d62828;
-}
-
-/* 야구공 장식 */
-
-.baseball{
-
-    width:120px;
-    height:120px;
-
-    background:white;
-
-    border-radius:50%;
-
-    margin:20px auto;
-
-    position:relative;
-
-    box-shadow:
-        0 0 15px rgba(0,0,0,.2);
-}
-
-.baseball::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:25px;
-    top:10px;
-
-    width:50px;
-    height:100px;
-
-    border-left:4px dashed red;
-
-    border-radius:50%;
-}
-
-.baseball::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:25px;
-    top:10px;
-
-    width:50px;
-    height:100px;
-
-    border-right:4px dashed red;
-
-    border-radius:50%;
+.card{
+  background:white;
+  margin:20px auto;
+  max-width:600px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
