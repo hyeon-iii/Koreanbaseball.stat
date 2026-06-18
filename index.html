@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>야구 선수 성적 조회</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>⚾ 야구 선수 성적 조회</h1>
+        <p>MLB 선수 검색</p>
+    </header>
+
+    <main>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="playerName"
+                placeholder="선수 이름 입력 (예: Ohtani)"
+            >
+            <button onclick="searchPlayer()">
+                검색
+            </button>
+        </div>
+
+        <div id="results"></div>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
