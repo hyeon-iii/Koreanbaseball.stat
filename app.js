@@ -1,51 +1,34 @@
-let players = [];
+result.innerHTML = `
+<div class="player-card">
 
-async function loadData() {
+    <div class="player-header">
+        <h2>${player.name}</h2>
+        <p>${player.team}</p>
+    </div>
 
-    const response =
-        await fetch("./data/players.json");
+    <div class="stats-grid">
 
-    players = await response.json();
-}
-
-loadData();
-
-function searchPlayer() {
-
-    const keyword =
-        document
-        .getElementById("searchInput")
-        .value
-        .trim();
-
-    const result =
-        document.getElementById("result");
-
-    const player = players.find(
-        p => p.name.includes(keyword)
-    );
-
-    if (!player) {
-
-        result.innerHTML =
-            "<h3>선수를 찾을 수 없습니다.</h3>";
-
-        return;
-    }
-
-    result.innerHTML = `
-        <div class="card">
-            <h2>${player.name}</h2>
-
-            <p>팀 : ${player.team}</p>
-
-            <p>타율 : ${player.avg}</p>
-
-            <p>홈런 : ${player.hr}</p>
-
-            <p>타점 : ${player.rbi}</p>
-
-            <p>OPS : ${player.ops}</p>
+        <div class="stat-box">
+            <div class="stat-title">타율</div>
+            <div class="stat-value">${player.avg}</div>
         </div>
-    `;
-}
+
+        <div class="stat-box">
+            <div class="stat-title">홈런</div>
+            <div class="stat-value">${player.hr}</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-title">타점</div>
+            <div class="stat-value">${player.rbi}</div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-title">OPS</div>
+            <div class="stat-value">${player.ops}</div>
+        </div>
+
+    </div>
+
+</div>
+`;
